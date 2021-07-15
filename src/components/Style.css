@@ -1,0 +1,16 @@
+.img{
+     display: block;
+     margin: 0 auto 0 auto;
+     border-radius: 50%;
+     height: 200px;
+     width: 200px;
+ 
+     }
+.txt{
+      font-size: 25px;
+      letter-spacing: 3px;
+       font-family: 'Open Sans',sans-serif;
+      font-weight: 550;
+      margin: 0px 12px 4px 12px;
+      
+}

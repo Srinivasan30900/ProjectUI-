@@ -4,9 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import SwipeableViews from 'react-swipeable-views';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { AppBar } from "@material-ui/core";
 import Typography from '@material-ui/core/Typography';
-import './image.css'
+import './Style.css'
 import {
   Container,
   StyledLabel,
@@ -83,8 +82,8 @@ componentDidMount() {
           <Tabs
             value={this.state.value}
             onChange={this.handleChange}
-            indicatorColor="secondary"
-           
+            indicatorColor="primary"
+            textColor="primary"
             centered
           >
             <Tab label="Customer Info" />
@@ -106,32 +105,32 @@ componentDidMount() {
                 
                <img className='img' src="/images/profile1.jpg" alt="user image"/>
                <br></br>
-              <StyledLabel >Name - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_full_name}</StyledLabel> )}</StyledLabel>
+              <div className='txt' >NAME  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_full_name}</StyledLabel> )}</div>
                   <br></br>
 
-              <StyledLabel>Job Title - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_job_title}</StyledLabel> )}</StyledLabel>
+              <div  className='txt'>JOB TITLE  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_job_title}</StyledLabel> )}</div>
                   <br></br>
 
-              <StyledLabel>Company Name -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_company_name}</StyledLabel> )}</StyledLabel>
+              <div  className='txt'>COMPANY NAME { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_company_name}</StyledLabel> )}</div>
                   <br></br>
 
-              <StyledLabel>Email -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.email}</StyledLabel> )} </StyledLabel>
+              <div  className='txt'>EMAIL { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.email}</StyledLabel> )} </div>
                   <br></br>
 
-              <StyledLabel>Address - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_address}</StyledLabel> )} </StyledLabel>
+              <div  className='txt'>ADDRESS  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_address}</StyledLabel> )} </div>
                   <br></br>
 
-              <StyledLabel>Customer Queue - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_customer_queue}</StyledLabel> )} </StyledLabel>
+              <div  className='txt'>CUSTOMER QUEUE  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_customer_queue}</StyledLabel> )} </div>
                   <br></br>
 
-              <StyledLabel>Issue -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_issue}</StyledLabel> )} </StyledLabel>
+              <div  className='txt'>ISSUE { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_issue}</StyledLabel> )} </div>
               </TextField>
 
           </TabContainer>
@@ -140,20 +139,20 @@ componentDidMount() {
           <TabContainer dir={theme.direction}>
               <TextField>
                 <br></br>
-                <StyledLabel>Account Name - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_account_name}</StyledLabel> )}</StyledLabel>
+                <div  className='txt'>ACCOUNT NAME  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_account_name}</StyledLabel> )}</div>
                   <br></br>
-                <StyledLabel>Account Number -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_account_number}</StyledLabel> )} </StyledLabel>
+                <div  className='txt'>ACCOUNT NUMBER { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_account_number}</StyledLabel> )} </div>
                   <br></br>
-                <StyledLabel>Branch -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_branch}</StyledLabel> )} </StyledLabel>
+                <div  className='txt'>BRANCH { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_branch}</StyledLabel> )} </div>
                   <br></br>
-                <StyledLabel>Account Rating -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_account_rating}</StyledLabel> )} </StyledLabel>
+                <div  className='txt'>ACCOUNT RATING { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_account_rating}</StyledLabel> )} </div>
                   <br></br>
-                <StyledLabel>Account Type -{ this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_account_type}</StyledLabel> )} </StyledLabel>
+                <div  className='txt'>ACCOUNT TYPE { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_account_type}</StyledLabel> )} </div>
               </TextField>
 
           </TabContainer>
@@ -162,11 +161,11 @@ componentDidMount() {
 
             <TextField>
               <br></br>
-              <StyledLabel>Previous Call Information - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_previous_history}</StyledLabel> )}</StyledLabel>
+              <div  className='txt'>PREVIOUS CALL INFORMATION  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_previous_history}</StyledLabel> )}</div>
                 <br></br>
-              <StyledLabel>Changes made in CRM - { this.state.loading?(  <div>loading..</div> ):
-                ( <StyledLabel> {this.state.person.u_changes_made_in_crm}</StyledLabel> )}</StyledLabel>
+              <div  className='txt'>CHANGES MADE IN CRM  { this.state.loading?(  <div>loading..</div> ):
+                ( <StyledLabel> {this.state.person.u_changes_made_in_crm}</StyledLabel> )}</div>
             </TextField>
           
           </TabContainer>
